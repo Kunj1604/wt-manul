@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variable, Function, Condition, and Loop Example</title>
+  </head>
+  <body>
+    <h1>Is the number even or odd?</h1>
+    <input type="numInput" id="numInput" />
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        // Variables
+      let numInputElement = document.getElementById("numInput");
+      let resultElement = document.getElementById("result");
+
+      // Function
+      function checkNumber() {
+        // Condition
+        if (numInputElement.value % 2 === 0) {
+          resultElement.textContent = "The number is even.";
+        } else {
+          resultElement.textContent = "The number is odd.";
+        }
+      }
+    </script>
+  </body>
+</html>

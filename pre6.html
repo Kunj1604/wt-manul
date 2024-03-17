@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 15px;
+  font-size: 25px;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.wrapper {overflow: auto;}
+#main {margin-left: 4px;}
+
+#menulist {
+    margin: 0;
+    padding: 0;
+  }
+
+.menuitem {
+  background: #CDF0F6;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  list-style-type: none;
+  margin: 4px;
+  padding: 2px;
+}
+
+@media screen and (min-width: 480px) {
+  #leftsidebar {width: 200px; float: left;}
+  #main {margin-left: 216px;}
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>Create a Flex Container</h1>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+</div>
+<h1>Grid Layout</h1>
+
+<p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning:</p>
+
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">Menu</div>
+  <div class="item3">Main</div>  
+  <div class="item4">Right</div>
+  <div class="item5">Footer</div>
+</div>
+
+<div class="wrapper">
+  <div id="leftsidebar">
+    <ul id="menulist">
+      <li class="menuitem">Menu-item 1</li>
+      <li class="menuitem">Menu-item 2</li>
+      <li class="menuitem">Menu-item 3</li>
+      <li class="menuitem">Menu-item 4</li>
+      <li class="menuitem">Menu-item 5</li>
+    </ul>
+  </div>
+  
+  <div id="main">
+    <h1>Resize the browser window to see the effect!</h1>
+    <p>This example shows a menu that will float to the left of the page if the viewport is 480 pixels wide or wider. If the viewport is less than 480 pixels, the menu will be on top of the content.</p>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
